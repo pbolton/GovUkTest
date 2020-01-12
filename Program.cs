@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GovUKApi
+namespace GovUKMain
 {
+    using GovUkApi;
+
     class Program
     {
         static void Main(string[] args)
         {
+            try
+            {
+                IGovUkApi api = new GovUkApi();
+
+                var londonUsers = api.GetUsersInArea().Result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

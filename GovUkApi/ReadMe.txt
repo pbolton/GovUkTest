@@ -1,0 +1,2 @@
+﻿*** It is intended that the Interface IGovUkApi be used in a DI container using constructor dependancy injection
+*** If no parameters are passed to the default base location is London within a 50 mile radius
